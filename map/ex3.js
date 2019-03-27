@@ -59,8 +59,28 @@ En sortie:
 
  */
 
+
+
 function getMoviesFreshness(movies) {
-}
+  const labelMovie = (rating) =>{
+    if (rating > 75){
+    return 'certified fresh'
+    }else if ((rating >= 60) && (rating <= 75)){
+    return 'fresh'
+    }else{
+    return 'rotten'
+    }
+  };
+  const labelArray = movies.map(function(film){
+    let obj = {};
+      obj.name = film.name,
+      obj.rating = film.rating,
+      obj.label = labelMovie(film.rating);
+      return obj;
+      }
+  );
+  return labelArray;
+};
 
 
 
