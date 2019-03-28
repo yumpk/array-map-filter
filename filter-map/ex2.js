@@ -21,7 +21,7 @@ Tableau en entrée:
 
 Sortie attendue:
 ['Bordeaux', 'Lille', 'Marseille', 'Reims', 'Toulouse']
-
+   
 */
 
 function getCampusesTeachingReact(campuses) {
