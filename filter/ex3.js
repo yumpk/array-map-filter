@@ -24,7 +24,24 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
-}
+  let stark = name =>{
+    let splitName = name.split(' ');
+    let lastName = splitName[1];
+    const verifyLastName = lastName => {
+    if (lastName === 'Stark'){
+      return true;
+    };
+  };
+  return verifyLastName(lastName);
+  };
+  const starkArray = names.filter(function(completeNames){
+    if (stark(completeNames) === true){
+      return completeNames;
+    }; 
+  }
+  );
+  return starkArray;
+};
 
 // Ne pas modifier l'export
 module.exports = keepStarks;
